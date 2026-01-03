@@ -50,9 +50,13 @@ const MainScreen = () => {
     return { date, day };
   };
   const { date, day } = getFormattedDate();
+  const marqueeText = 'CRUDE OIL : $65.70 (9.9%)';
+
 
   return (
     <div className={styles.mainscreen_Section}>
+
+
       <div className="container">
         <div className={`${styles.mainscreen_container}`}>
           <div className={`${styles.left_screen}`}>
@@ -196,8 +200,22 @@ const MainScreen = () => {
       </div>
 
       <div className={styles.marquee_Sec}>
+        <div className={styles.marquee_label}>
+          JAS METAL GOLD TRADING
+        </div>
 
-        CURUDE OIL : $65.70 (9.9%)
+        <div className={styles.marquee_wrap}>
+          {[...Array(8)].map((_, index) => (
+            <span key={index} className={styles.marquee_item}>
+              {marqueeText}
+            </span>
+          ))}
+
+
+        </div>
+      </div>
+      <div className={styles.background_lines}>
+        <Image src={'/images/lines.svg'} height={1000} width={1000} alt="" />
       </div>
     </div>
   );
