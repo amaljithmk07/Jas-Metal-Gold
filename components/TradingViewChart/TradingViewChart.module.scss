@@ -5,6 +5,11 @@
   border-radius: 14px;
   overflow: hidden;
   padding: 8px;
+
+  @media (min-resolution: 1.1dppx) {
+
+    height: 200px;
+  }
 }
 
 .table {
