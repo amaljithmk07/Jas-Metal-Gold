@@ -98,7 +98,7 @@
 
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 10px 30px;
+        gap: 10px 20px;
         padding: 0 20px 20px 20px;
         z-index: 1;
         position: relative;
@@ -112,6 +112,8 @@
     position: relative;
     top: -10px;
     left: -40px;
+    flex-shrink: 0;
+
     height: 85px;
 
     img {
@@ -164,7 +166,7 @@
 
 .askValue,
 .bidValue {
-    font-size: 40px;
+    font-size: 35px;
     font-weight: 500;
 }
 
@@ -187,7 +189,7 @@
     grid-column-end: 4;
 
     width: 100%;
-    max-width: 140px;
+    max-width: 120px;
     height: auto;
     display: flex;
     align-items: center;
